@@ -383,6 +383,8 @@ ol {
   cursor: pointer;
 }
 
+
+
 .mobile-nav-toggle:hover {
   background: var(--sky);
 }
@@ -1790,6 +1792,7 @@ ol {
   color: var(--muted);
   font-size: 0.9rem;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
 }
 
@@ -2711,26 +2714,45 @@ tbody tr:hover {
 
 @media (max-width: 1050px) {
   .site-nav {
-    position: fixed;
-    top: 76px;
-    right: 0;
-    bottom: 0;
-    width: min(86vw, 380px);
-    overflow: auto;
-    align-content: start;
-    align-items: stretch;
-    padding: 1.2rem;
-    border-left: 1px solid var(--border);
-    background: var(--ivory-2);
-    box-shadow: var(--shadow-md);
-    flex-direction: column;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition:
-      opacity 160ms ease,
-      visibility 0s linear 160ms;
-  }
+  position: fixed;
+  z-index: 200;
+  top: 76px;
+  right: 0;
+  bottom: 0;
+
+  width: min(86vw, 380px);
+  height: calc(100dvh - 76px);
+  max-height: calc(100dvh - 76px);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+
+  align-content: start;
+  align-items: stretch;
+  gap: 0.25rem;
+
+  padding:
+    1.2rem
+    max(1.2rem, env(safe-area-inset-right))
+    calc(2rem + env(safe-area-inset-bottom))
+    1.2rem;
+
+  border-left: 1px solid var(--border);
+  background: var(--ivory-2);
+  box-shadow: var(--shadow-md);
+
+  flex-direction: column;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 160ms ease,
+    visibility 0s linear 160ms;
+}
 
   .site-nav.is-open {
     opacity: 1;
