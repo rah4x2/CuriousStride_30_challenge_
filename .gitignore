@@ -1,0 +1,7 @@
+config.local.js
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

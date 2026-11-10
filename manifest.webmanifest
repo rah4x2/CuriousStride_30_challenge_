@@ -1,0 +1,17 @@
+{
+  "name": "CuriousStride 30-Day Reflection Challenge",
+  "short_name": "CuriousStride",
+  "description": "One thoughtful reflection prompt each day for 30 days.",
+  "start_url": "/#/home",
+  "display": "standalone",
+  "background_color": "#F8F5EF",
+  "theme_color": "#172B4D",
+  "icons": [
+    {
+      "src": "/assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

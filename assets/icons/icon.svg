@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CuriousStride">
+  <rect width="512" height="512" rx="112" fill="#172B4D"/>
+  <path d="M112 322c62-1 92-42 116-91 23-47 50-91 112-91 25 0 45 6 60 14" fill="none" stroke="#DCE8F7" stroke-width="34" stroke-linecap="round"/>
+  <path d="M112 374c83 0 134-32 164-96 27-59 58-98 124-98" fill="none" stroke="#C4AB79" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="112" cy="322" r="25" fill="#4169B1"/>
+  <circle cx="400" cy="180" r="25" fill="#F8F5EF"/>
+</svg>
